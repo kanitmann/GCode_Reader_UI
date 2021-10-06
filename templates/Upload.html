@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat'
+            rel='stylesheet' type='text/css'>
+        <title>File Uploader</title>
+    </head>
+
+    <body>
+        <div class="login">
+            {% block content %}
+            <h1 class="title">
+                Trikon G-Code Modifier
+            </h1>
+            <h2 class="subtitle">
+                Made with ❣ by Kanit Mann
+            </h2> {% endblock %}
+
+            <p>
+                {% with messages = get_flashed_messages() %} {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %} {% endwith %}
+            </p>
+
+            <form method="post" action="/upload" enctype="multipart/form-data">
+                <div class="box__input">
+                    <dl>
+                        <p> Auth_key: <input name="psw" type="password" /></p>
+                        <p>
+                            <input type="file" name="files[]" multiple="true"
+                                autocomplete="off" required>
+                        </p>
+                    </dl>
+                    <p>
+                        <input class="signin" type="submit" value="Submit">
+                    </p>
+                </div>
+            </div>
+
+        </form>
+    </body>
+</html>
