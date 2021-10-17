@@ -39,4 +39,4 @@ def upload_file():
 
 if __name__ == "__main__":
     print('to upload files navigate to http://127.0.0.1:4000/upload')
-    app.run(host='127.0.0.1',port=4000,debug=True,threaded=True)
+    app.run(port=4000,debug=True,threaded=True)
