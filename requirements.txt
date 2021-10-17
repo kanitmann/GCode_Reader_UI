@@ -1,2 +1,4 @@
-Flask
-Werkzeug
+flask
+werkzeug
+flask-heroku
+gunicorn
